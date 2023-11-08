@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="soal5.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Suara Hewan</h1>
+    <label for="hewan">Pilih Hewan:</label>
+    <select id="hewan">
+      <option value="kucing">Kucing</option>
+      <option value="anjing">Anjing</option>
+    </select>
+    <br>
+    <button onclick="tampilkanSuara()">Tampilkan Suara</button>
+    <p>Suara Hewan: <span id="suara"></span></p>
+  </div>
+
+  <script>
+
+    function tampilkanSuara() {
+      var selectedHewan = document.getElementById("hewan");
+      var suara = "";
+      
+      if (selectedHewan.value === "kucing") {
+        suara = "meong";
+      } else if (selectedHewan.value === "anjing") {
+        suara = "guguk";
+      } else {
+        suara = "Hewan tidak dikenal.";
+      }
+      
+      document.getElementById("suara").textContent = suara;
+    }
+  </script>
+</body>
+</html>

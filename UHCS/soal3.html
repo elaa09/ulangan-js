@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="soal3.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Kalkulator Luas Segitiga</h1>
+    <label for="alas">Masukkan Nilai Alas:</label>
+    <input type="number" id="alas">
+    <br>
+    <label for="tinggi">Masukkan Nilai Tinggi:</label>
+    <input type="number" id="tinggi">
+    <br>
+    <button onclick="hitungLuas()">Hitung Luas</button>
+    <p>Luas Segitiga: <span id="luas"></span></p>
+  </div>
+
+  <script>
+    // JavaScript untuk menghitung luas segitiga
+    function hitungLuas() {
+      var alas = parseFloat(document.getElementById("alas").value);
+      var tinggi = parseFloat(document.getElementById("tinggi").value);
+
+      var luas = 0.5 * alas * tinggi;
+
+      document.getElementById("luas").textContent = luas;
+    }
+  </script>
+</body>
+</html>

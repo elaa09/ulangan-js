@@ -1,0 +1,10 @@
+// JavaScript untuk menghitung luas segitiga
+function hitungLuas() {
+    var alas = parseFloat(document.getElementById("alas").value);
+    var tinggi = parseFloat(document.getElementById("tinggi").value);
+  
+    var luas = 0.5 * alas * tinggi;
+  
+    document.getElementById("luas").textContent = luas;
+  }
+  

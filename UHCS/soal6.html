@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="soal6.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Deteksi Jenis Smartphone</h1>
+      <label for="inputText">Masukkan Spesifikasi Smartphone:</label>
+      <input type="text" id="inputText" />
+      <br />
+      <button onclick="deteksiJenis()">Deteksi Jenis</button>
+      <p>Jenis Smartphone: <span id="jenis"></span></p>
+    </div>
+
+    <script>
+      // JavaScript untuk mendeteksi jenis smartphone berdasarkan input
+      function deteksiJenis() {
+        // Ambil nilai dari input textbox
+        var inputText = document.getElementById("inputText").value.toLowerCase();
+
+        // Cek apakah input mengandung kata "10mp" (kamera)
+        if (inputText.includes("10mp")) {
+          document.getElementById("jenis").textContent = "Kamera";
+        }
+        // Cek apakah input mengandung kata "128gb" (memori)
+        else if (inputText.includes("128gb")) {
+          document.getElementById("jenis").textContent = "Memori";
+        }
+        // Jika tidak sesuai, tampilkan pesan kesalahan
+        else {
+          document.getElementById("jenis").textContent = "Tidak dapat mengenali jenis smartphone.";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="soal4.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Kalkulator Luas Jajar Genjang</h1>
+      <label for="panjangA">Panjang A:</label>
+      <input type="number" id="panjangA" />
+      <br />
+      <label for="panjangB">Panjang B:</label>
+      <input type="number" id="panjangB" />
+      <br />
+      <button onclick="hitungLuas()">Hitung Luas</button>
+      <p>Luas Jajar Genjang: <span id="luas"></span></p>
+    </div>
+
+    <script>
+      // JavaScript untuk menghitung luas jajar genjang
+      function hitungLuas() {
+        // Ambil nilai panjang A dan panjang B dari input
+        var panjangA = parseFloat(document.getElementById("panjangA").value);
+        var panjangB = parseFloat(document.getElementById("panjangB").value);
+
+        // Hitung luas jajar genjang (2 x (a + b))
+        var luas = 2 * (panjangA + panjangB);
+
+        // Tampilan hasilnya
+        document.getElementById("luas").textContent = luas;
+      }
+    </script>
+  </body>
+</html>

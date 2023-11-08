@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="soal2.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Penilaian Nilai</h1>
+      <label for="nilai">Masukkan Nilai:</label>
+      <input type="number" id="nilai" />
+      <br />
+      <button onclick="tampilkanPesan()">Tampilkan Pesan</button>
+      <p>Pesan: <span id="pesan"></span></p>
+    </div>
+
+    <script>
+      function tampilkanPesan() {
+        var nilai = parseInt(document.getElementById("nilai").value);
+        var pesan = "";
+
+        if (nilai > 80) {
+          pesan = "SANGAT MEMUASKAN";
+        } else if (nilai >= 60 && nilai <= 80) {
+          pesan = "MEMUASKAN";
+        } else {
+          pesan = "JANGAN MENYERAH, COBA LAGI!";
+        }
+
+        document.getElementById("pesan").textContent = pesan;
+      }
+    </script>
+  </body>
+</html>
